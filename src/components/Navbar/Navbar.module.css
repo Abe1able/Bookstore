@@ -1,0 +1,24 @@
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 6.25rem;
+}
+
+.navbar h2 {
+  color: #0290ff;
+}
+
+.navbar_list {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar_list li {
+  list-style: none;
+}
+
+.navbar_list li a {
+  color: #121212;
+  text-decoration: none;
+}
