@@ -4,20 +4,22 @@ import { PropTypes } from 'prop-types';
 import styles from './Books.module.css';
 
 const BookComponent = (props) => {
-  const { book } = props;
+  const { book, removeBookProps, id } = props;
 
   return (
     <li className={styles.book_section}>
-      { book }
+      { book.bookName }
       <br />
       <br />
-      <button type="button">Remove</button>
+      <button type="button" onClick={() => removeBookProps(id)}>Remove</button>
     </li>
   );
 };
 
 BookComponent.propTypes = {
-  book: PropTypes.string.isRequired,
+  book: PropTypes.instanceOf(Object).isRequired,
+  id: PropTypes.string.isRequired,
+  removeBookProps: PropTypes.func.isRequired,
 };
 
 export default BookComponent;
